@@ -4,10 +4,19 @@
  */
 
 /* Bibliotecas a incluir */
+#include <stdio.h>
 
-void main()
-{
+void main(void) {
 	/* Declaración de variables */
-
+	int valor = 0;
 	/* Código usando condicional switch */
+	switch (valor) {
+	case 0:
+	case 1:
+		printf("Se ha recibido cero o uno\n");
+		break;
+	default:
+		printf("No es un valor esperado\n");
+		break;
+	}
 }

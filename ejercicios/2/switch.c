@@ -5,10 +5,22 @@
  */
 
 /* Bibliotecas a incluir */
+#include <stdio.h>
 
-void main()
-{
+void main(void) {
 	/* Declaración de variables */
+	int valor = 3;
 
 	/* Código usando condicional switch */
+	switch (valor) {
+	case 0:
+		printf("Valor es igual a cero\n");
+		break;
+	case 1:
+		printf("Valor es igual a 1\n");
+		break;
+	default:
+		printf("No es un valor esperado\n");
+		break;
+	}
 }

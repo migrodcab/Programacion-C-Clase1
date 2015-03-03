@@ -7,12 +7,27 @@
  * una 'a' seguida de una 's' y devolvemos 0.
 
 /* Bibliotecas a incluir */
+#include <stdio.h>
+#include <string.h>
 
-int main()
-{
+int main(void) {
 	/* Declaración de variables */
+	char cadena[10] = "cadenas\0";
+	int i;
 
 	/* Código usando condicional for */
-
+	for (i = 0; i < strlen(cadena); i++) {
+		if (cadena[i] == 'a') {
+			if (cadena[i+1] == 's') {
+				goto es_s;
+			}
+		}
+	}
+	
 	/* Declaracion de etiquetas */
+	printf("No tenemos una 'a' seguida de una 's'\n");
+	return 0;
+es_s:
+	printf("Tenemos una 'a' seguida de una 's'\n");
+	return 1;
 }
